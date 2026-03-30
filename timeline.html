@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Birthday Journey — Timeline</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="timeline">
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursorTrail" id="cursorTrail" aria-hidden="true"></div>
+    <div class="emojiLayer" id="emojiLayer" aria-hidden="true"></div>
+    <canvas class="bgCanvas" id="bgCanvas" aria-hidden="true"></canvas>
+
+    <div class="musicDock">
+      <button class="musicBtn hoverExpand" id="musicBtn" aria-label="Toggle music">
+        <span class="musicIcon" aria-hidden="true"><i class="fa-solid fa-music"></i></span>
+        <span class="musicLabel" id="musicLabel">Play</span>
+        <span class="eq" id="eq" aria-hidden="true">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </span>
+      </button>
+    </div>
+    <audio
+      id="bgMusic"
+      preload="none"
+      loop
+      crossorigin="anonymous"
+      src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_946b5f8bb0.mp3?filename=lofi-study-112191.mp3"
+    ></audio>
+
+    <main>
+      <section class="section timelineSection pageTopPad">
+        <div class="container">
+          <header class="sectionHeader">
+            <h2>Memory Timeline</h2>
+            <p>Step 2 of 5 — receipts, but make them wholesome (and mildly embarrassing).</p>
+          </header>
+
+          <div class="timeline">
+            <div class="line" aria-hidden="true"></div>
+
+            <article class="tCard glass reveal fromLeft">
+              <div class="tMedia">
+                <div class="imgPh">
+                  <span>📸</span>
+                  <small>Replace with your photo</small>
+                </div>
+              </div>
+              <div class="tContent">
+                <h3>The Day We Met</h3>
+                <p>Two strangers. One shared brain cell. The legend began.</p>
+              </div>
+              <div class="dot" aria-hidden="true"></div>
+            </article>
+
+            <article class="tCard glass reveal fromRight">
+              <div class="tMedia">
+                <div class="imgPh alt">
+                  <span>🎬</span>
+                  <small>Iconic moment</small>
+                </div>
+              </div>
+              <div class="tContent">
+                <h3>The “We Can Totally Do This” Era</h3>
+                <p>We couldn’t. But the confidence was inspirational.</p>
+              </div>
+              <div class="dot" aria-hidden="true"></div>
+            </article>
+
+            <article class="tCard glass reveal fromLeft">
+              <div class="tMedia">
+                <div class="imgPh">
+                  <span>🍕</span>
+                  <small>Friendship fuel</small>
+                </div>
+              </div>
+              <div class="tContent">
+                <h3>Snack Pact</h3>
+                <p>“Just one bite” — the biggest lie we ever told.</p>
+              </div>
+              <div class="dot" aria-hidden="true"></div>
+            </article>
+
+            <article class="tCard glass reveal fromRight">
+              <div class="tMedia">
+                <div class="imgPh alt">
+                  <span>🚀</span>
+                  <small>Glow up arc</small>
+                </div>
+              </div>
+              <div class="tContent">
+                <h3>Level Up Season</h3>
+                <p>
+                  Watching you grow is genuinely awesome. Don’t get a big head though.
+                </p>
+              </div>
+              <div class="dot" aria-hidden="true"></div>
+            </article>
+
+            <article class="tCard glass reveal fromLeft">
+              <div class="tMedia">
+                <div class="imgPh">
+                  <span>🫂</span>
+                  <small>Comfort zone</small>
+                </div>
+              </div>
+              <div class="tContent">
+                <h3>“I Got You” Moments</h3>
+                <p>When life was heavy, you showed up. That matters. A lot.</p>
+              </div>
+              <div class="dot" aria-hidden="true"></div>
+            </article>
+          </div>
+
+          <div class="pageNavRow">
+            <button class="btn ghost hoverExpand" data-nav="index.html">Back</button>
+            <button class="btn primary hoverExpand" data-nav="gallery.html">
+              Next: Gallery <span aria-hidden="true">➡️</span>
+              <span class="btnGlow" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

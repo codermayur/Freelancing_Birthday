@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Birthday Journey — Finale</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="finale">
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursorTrail" id="cursorTrail" aria-hidden="true"></div>
+    <div class="emojiLayer" id="emojiLayer" aria-hidden="true"></div>
+    <canvas class="bgCanvas" id="bgCanvas" aria-hidden="true"></canvas>
+
+    <div class="musicDock">
+      <button class="musicBtn hoverExpand" id="musicBtn" aria-label="Toggle music">
+        <span class="musicIcon" aria-hidden="true"><i class="fa-solid fa-music"></i></span>
+        <span class="musicLabel" id="musicLabel">Play</span>
+        <span class="eq" id="eq" aria-hidden="true">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </span>
+      </button>
+    </div>
+    <audio
+      id="bgMusic"
+      preload="none"
+      loop
+      crossorigin="anonymous"
+      src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_946b5f8bb0.mp3?filename=lofi-study-112191.mp3"
+    ></audio>
+
+    <main>
+      <section class="section finaleSection pageTopPad">
+        <canvas class="fwCanvas" id="fwCanvas" aria-hidden="true"></canvas>
+        <div class="finaleDim" id="finaleDim" aria-hidden="true"></div>
+
+        <div class="container finaleInner">
+          <div class="finalCard glass">
+            <h2>Finale</h2>
+            <p>Step 5 of 5 — hit the button and pretend you’re not impressed.</p>
+            <button class="btn primary hoverExpand" id="fireBtn">
+              Final Surprise <span aria-hidden="true">🎆</span>
+              <span class="btnGlow" aria-hidden="true"></span>
+            </button>
+
+            <div class="pageNavRow">
+              <button class="btn ghost hoverExpand" data-nav="surprise.html">Back</button>
+              <button class="btn ghost hoverExpand" data-nav="index.html">Restart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cinematic modal (above fireworks) -->
+        <div class="finaleModalWrap" id="finaleModalWrap" aria-hidden="true">
+          <div class="finaleModal glass" role="dialog" aria-modal="true" aria-labelledby="finaleTitle">
+            <h3 class="finaleTitle" id="finaleTitle">HAPPY BIRTHDAY YOU LEGEND 🎉</h3>
+            <p class="finaleSub" id="finaleSub">
+              Life is chaotic… but at least I have you 😂❤️
+            </p>
+            <div class="finaleActions">
+              <button class="btn primary hoverExpand" id="finaleNextBtn">
+                One Last Thing <span aria-hidden="true">👀</span>
+                <span class="btnGlow" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

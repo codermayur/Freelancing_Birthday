@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Birthday Surprise</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons (allowed CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="landing">
+    <!-- Custom cursor + trail -->
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursorTrail" id="cursorTrail" aria-hidden="true"></div>
+
+    <!-- Floating emoji layer -->
+    <div class="emojiLayer" id="emojiLayer" aria-hidden="true"></div>
+
+    <!-- Background canvas (particles + subtle gradient pulses) -->
+    <canvas class="bgCanvas" id="bgCanvas" aria-hidden="true"></canvas>
+
+    <!-- Music (floating control) -->
+    <div class="musicDock">
+      <button class="musicBtn hoverExpand" id="musicBtn" aria-label="Toggle music">
+        <span class="musicIcon" aria-hidden="true"><i class="fa-solid fa-music"></i></span>
+        <span class="musicLabel" id="musicLabel">Play</span>
+        <span class="eq" id="eq" aria-hidden="true">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </span>
+      </button>
+    </div>
+    <audio
+      id="bgMusic"
+      preload="none"
+      loop
+      crossorigin="anonymous"
+      src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_946b5f8bb0.mp3?filename=lofi-study-112191.mp3"
+    ></audio>
+
+    <main class="pageWrap">
+      <!-- PAGE 1: Landing -->
+      <section class="section landing">
+        <div class="container landingInner pageTopPad">
+          <div class="badge glass">
+            <span class="spark" aria-hidden="true">✨</span>
+            <span>Step 1 of 5 — The Journey Begins</span>
+          </div>
+
+          <h1 class="heroTitle">
+            Happy Birthday
+            <span class="friendName" id="friendName">Shreya</span>
+            <span aria-hidden="true">🎉</span>
+          </h1>
+
+          <p class="typeRow">
+            <span class="typeText" id="typeText" aria-live="polite"></span>
+            <span class="typeCursor" id="typeCursor" aria-hidden="true">|</span>
+          </p>
+
+          <div class="heroCtas">
+            <button class="btn primary hoverExpand" data-nav="timeline.html">
+              Start the Journey
+              <span class="btnGlow" aria-hidden="true"></span>
+            </button>
+            <button class="btn ghost hoverExpand" data-nav="gallery.html">
+              Skip to gallery (coward mode)
+            </button>
+          </div>
+
+          <div class="hint">
+            <span class="mouse" aria-hidden="true"></span>
+            <span>No scrolling. Only buttons. Only vibes.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

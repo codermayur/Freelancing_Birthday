@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Birthday Journey — Surprise</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="surprise">
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursorTrail" id="cursorTrail" aria-hidden="true"></div>
+    <div class="emojiLayer" id="emojiLayer" aria-hidden="true"></div>
+    <canvas class="bgCanvas" id="bgCanvas" aria-hidden="true"></canvas>
+
+    <div class="musicDock">
+      <button class="musicBtn hoverExpand" id="musicBtn" aria-label="Toggle music">
+        <span class="musicIcon" aria-hidden="true"><i class="fa-solid fa-music"></i></span>
+        <span class="musicLabel" id="musicLabel">Play</span>
+        <span class="eq" id="eq" aria-hidden="true">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </span>
+      </button>
+    </div>
+    <audio
+      id="bgMusic"
+      preload="none"
+      loop
+      crossorigin="anonymous"
+      src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_946b5f8bb0.mp3?filename=lofi-study-112191.mp3"
+    ></audio>
+
+    <main class="pageWrap">
+      <section class="section secretSection">
+        <div class="container secretInner pageTopPad">
+          <div class="secretCard glass">
+            <h2>Secret Surprise</h2>
+            <p>Step 4 of 5 — press the button and accept your fate.</p>
+            <button class="btn primary hoverExpand" id="secretBtn">
+              Click for Secret <span aria-hidden="true">😏</span>
+              <span class="btnGlow" aria-hidden="true"></span>
+            </button>
+
+            <div class="pageNavRow">
+              <button class="btn ghost hoverExpand" data-nav="gallery.html">Back</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div class="modalOverlay" id="modalOverlay" aria-hidden="true">
+        <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <button class="iconBtn hoverExpand" id="closeModal" aria-label="Close">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+          <h3 id="modalTitle">Surprise!</h3>
+          <p class="modalMsg">You’re stuck with me forever 😂❤️</p>
+          <div class="miniActions">
+            <button class="btn ghost hoverExpand" id="confettiAgain">More confetti</button>
+            <button class="btn primary hoverExpand isHidden" id="continueBtn">
+              Okay Fine… Next Surprise <span aria-hidden="true">👉</span>
+              <span class="btnGlow" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <canvas class="confettiCanvas" id="confettiCanvas" aria-hidden="true"></canvas>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
